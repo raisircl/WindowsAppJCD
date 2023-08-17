@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAppJCD", "WindowsAppJCD\WindowsAppJCD.csproj", "{96503EED-BEE8-48A8-9842-B17B6BEC75DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96503EED-BEE8-48A8-9842-B17B6BEC75DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96503EED-BEE8-48A8-9842-B17B6BEC75DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96503EED-BEE8-48A8-9842-B17B6BEC75DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96503EED-BEE8-48A8-9842-B17B6BEC75DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {859869F6-18C8-43F1-8792-83920AE091F6}
+	EndGlobalSection
+EndGlobal
