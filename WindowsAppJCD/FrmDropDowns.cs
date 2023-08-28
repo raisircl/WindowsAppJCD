@@ -71,5 +71,53 @@ namespace WindowsAppJCD
                 loadStates(x);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "";
+            foreach (var item in checkedListBox1.CheckedItems)
+            {
+              label1.Text += item.ToString()+"\n";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           label1.Text=monthCalendar1.SelectionStart.ToString();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Develop in JCD Batch");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+           // MessageBox.Show("Hello");
+            notifyIcon1.Visible = true;
+            notifyIcon1.ShowBalloonTip(1000,"Demo","Demo Text",ToolTipIcon.Info);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            label1.Text=nudRed.Value.ToString();
+            int r, g, b;
+            r = Convert.ToInt32(nudRed.Value);
+            g = Convert.ToInt32(nudGreen.Value);
+            b = Convert.ToInt32(nudBlue.Value);
+
+            this.BackColor = Color.FromArgb(r, g, b);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(@"C:\Users\RAI\Downloads\kpl.jpg");
+        }
     }
 }
