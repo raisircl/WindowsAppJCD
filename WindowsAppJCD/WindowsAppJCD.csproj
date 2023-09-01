@@ -84,11 +84,23 @@
     <Compile Include="FrmDropDowns.Designer.cs">
       <DependentUpon>FrmDropDowns.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDSAndDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSAndDGV.Designer.cs">
+      <DependentUpon>frmDSAndDGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMathsOps.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMathsOps.Designer.cs">
       <DependentUpon>FrmMathsOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMDI.Designer.cs">
+      <DependentUpon>FrmMDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,8 +129,14 @@
     <EmbeddedResource Include="FrmDropDowns.resx">
       <DependentUpon>FrmDropDowns.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDSAndDGV.resx">
+      <DependentUpon>frmDSAndDGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMathsOps.resx">
       <DependentUpon>FrmMathsOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMDI.resx">
+      <DependentUpon>FrmMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

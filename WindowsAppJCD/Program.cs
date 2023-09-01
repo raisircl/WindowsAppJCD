@@ -16,7 +16,7 @@ namespace WindowsAppJCD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TreeViewListViewProgressBar());
+            Application.Run(new FrmMDI());
         }
     }
 }
