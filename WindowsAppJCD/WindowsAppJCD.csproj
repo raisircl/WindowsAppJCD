@@ -84,6 +84,12 @@
     <Compile Include="FrmDropDowns.Designer.cs">
       <DependentUpon>FrmDropDowns.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDS.Designer.cs">
+      <DependentUpon>FrmDS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSAndDGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDropDowns.resx">
       <DependentUpon>FrmDropDowns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDS.resx">
+      <DependentUpon>FrmDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSAndDGV.resx">
       <DependentUpon>frmDSAndDGV.cs</DependentUpon>
