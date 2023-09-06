@@ -54,6 +54,7 @@
             this.dgvdept.RowTemplate.Height = 24;
             this.dgvdept.Size = new System.Drawing.Size(639, 290);
             this.dgvdept.TabIndex = 21;
+            this.dgvdept.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdept_CellClick);
             // 
             // btnReset
             // 
@@ -72,6 +73,7 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -81,6 +83,7 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -90,6 +93,7 @@
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtLoc
             // 
@@ -127,8 +131,10 @@
             // 
             // txtDNo
             // 
+            this.txtDNo.BackColor = System.Drawing.SystemColors.Info;
             this.txtDNo.Location = new System.Drawing.Point(161, 19);
             this.txtDNo.Name = "txtDNo";
+            this.txtDNo.ReadOnly = true;
             this.txtDNo.Size = new System.Drawing.Size(123, 37);
             this.txtDNo.TabIndex = 12;
             // 
@@ -159,7 +165,7 @@
             this.Controls.Add(this.txtDNo);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmDept";
             this.Text = "FrmDept";
             this.Load += new System.EventHandler(this.FrmDept_Load);
