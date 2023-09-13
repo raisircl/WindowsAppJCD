@@ -1,0 +1,15 @@
+﻿create procedure sp_fetchdept
+as
+select dno,dname,loc from tbldept
+
+create procedure sp_insertdept(@dname nvarchar(20), @loc nvarchar(50))
+as
+insert into tbldept(dname,loc) values(@dname,@loc)
+
+create procedure sp_updatedept(@dno int, @dname nvarchar(50),@loc nvarchar(50))
+as
+update tbldept set dname=@dname,loc=@loc where dno=@dno
+
+create procedure sp_deletedept(@dno int)
+as
+delete from tbldept where dno=@dno

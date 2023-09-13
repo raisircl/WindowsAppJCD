@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace WindowsAppJCD
 {
@@ -17,8 +18,8 @@ namespace WindowsAppJCD
         {
             InitializeComponent();
         }
-       
-        SqlConnection conn = new SqlConnection();
+
+        SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["conn"]);
 
         SqlCommand comm = new SqlCommand();
         SqlDataAdapter da = new SqlDataAdapter();
@@ -28,15 +29,14 @@ namespace WindowsAppJCD
 
         private void FrmDept_Load(object sender, EventArgs e)
         {
-            conn.ConnectionString = "Data Source=.\\sqlexpress;Initial Catalog=sircldb;Persist Security Info=True;User ID=sa;Password=rai11**";
-            
+           
             //conn.Open();
             //if(conn.State==ConnectionState.Open)
             //{
             //    MessageBox.Show("connected....");
             //}
             //conn.Close();
-            
+
             loadgrid();
 
         }
@@ -44,9 +44,9 @@ namespace WindowsAppJCD
         {
             ds.Tables.Clear();
 
-            comm.CommandText = "select dno,dname,loc from tbldept";
+            comm.CommandText = "sp_fetchdept";
             
-            comm.CommandType=CommandType.Text;  
+            comm.CommandType=CommandType.StoredProcedure;  
 
             comm.Connection = conn;
 
@@ -68,8 +68,8 @@ namespace WindowsAppJCD
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            comm.CommandText = "insert into tbldept(dname,loc) values(@dname,@loc)";
-            comm.CommandType=CommandType.Text;
+            comm.CommandText = "sp_insertdept";
+            comm.CommandType=CommandType.StoredProcedure;
             comm.Connection = conn;
             comm.Parameters.AddWithValue("@dname",txtDName.Text);
             comm.Parameters.AddWithValue("@loc", txtLoc.Text);
@@ -94,8 +94,8 @@ namespace WindowsAppJCD
         {
             if (cri > -1)
             {
-                comm.CommandText = "update tbldept set dname=@dname,loc=@loc where dno=@dno";
-                comm.CommandType = CommandType.Text;
+                comm.CommandText = "sp_updatedept";
+                comm.CommandType = CommandType.StoredProcedure;
                 comm.Connection = conn;
                 comm.Parameters.AddWithValue("@dno", txtDNo.Text);
                 comm.Parameters.AddWithValue("@dname", txtDName.Text);
@@ -134,8 +134,8 @@ namespace WindowsAppJCD
         {
             if (cri > -1)
             {
-                comm.CommandText = "delete from tbldept where dno=@dno";
-                comm.CommandType = CommandType.Text;
+                comm.CommandText = "sp_deletedept";
+                comm.CommandType = CommandType.StoredProcedure;
                 comm.Connection = conn;
                 comm.Parameters.AddWithValue("@dno", txtDNo.Text);
               

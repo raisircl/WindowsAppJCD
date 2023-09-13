@@ -9,6 +9,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace WindowsAppJCD
 {
@@ -18,7 +19,7 @@ namespace WindowsAppJCD
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=sircldb;Persist Security Info=True;User ID=sa;Password=rai11**");
+        SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["conn"]);
         SqlCommand comm = new SqlCommand();
         SqlDataAdapter da = new SqlDataAdapter();
         DataSet ds = new DataSet();
@@ -26,7 +27,7 @@ namespace WindowsAppJCD
         bool blndept=false; 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            comm.CommandText = "insert into tblemp(ename,job,sal,hiredate,dno,addon,recordstatus) values(@ename,@job,@sal,@hd,@dno,@addon,@rs)";
+            comm.CommandText = "insert into tblemp(ename,job,sal ,hiredate,dno,addon,recordstatus) values(@ename,@job,@sal,@hd,@dno,@addon,@rs)";
             comm.CommandType = CommandType.Text;
             comm.Connection = conn;
             comm.Parameters.AddWithValue("@ename", txtename.Text);
@@ -65,9 +66,9 @@ namespace WindowsAppJCD
         {
             dsdept.Tables.Clear();
 
-            comm.CommandText = "select dno,dname,loc from tbldept";
+            comm.CommandText = "sp_fetchdept";
 
-            comm.CommandType = CommandType.Text;
+            comm.CommandType = CommandType.StoredProcedure;
 
             comm.Connection = conn;
 
