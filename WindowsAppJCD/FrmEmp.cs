@@ -97,5 +97,12 @@ namespace WindowsAppJCD
                 loadgrid(Convert.ToInt32(cmbdept.SelectedValue.ToString()));
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmEmpReport report = new FrmEmpReport();   
+            report.ShowDialog();
+
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.cmbdept = new System.Windows.Forms.ComboBox();
             this.btnsave = new System.Windows.Forms.Button();
             this.dgvemp = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvemp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,11 +170,22 @@
             this.dgvemp.Size = new System.Drawing.Size(1109, 618);
             this.dgvemp.TabIndex = 13;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(77, 603);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 53);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Print";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1750, 684);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvemp);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.cmbdept);
@@ -215,5 +227,6 @@
         private System.Windows.Forms.ComboBox cmbdept;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.DataGridView dgvemp;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdept)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,11 +149,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "DNo";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(673, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 59);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmDept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 652);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvdept);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnDelete);
@@ -188,5 +200,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDNo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -155,6 +155,11 @@ namespace WindowsAppJCD
                 loadgrid();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new FrmDeptReport().ShowDialog();
+        }
     }
 }
 /*
